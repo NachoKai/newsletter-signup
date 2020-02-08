@@ -11,27 +11,27 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
   res.sendFile(__dirname + "/signup.html");
 });
 
-app.post("/", function (req, res) {
+app.post("/", (req, res) => {
   let firstName = req.body.fName;
   let lastName = req.body.lName;
   let email = req.body.email;
 
   let data = {
-    'members': [{
+    members: [{
       email_address: email,
-      status: 'subscribed',
+      status: "subscribed",
       merge_fields: {
         FNAME: firstName,
         LNAME: lastName
       }
-    }],
-  }
+    }]
+  };
 
-  let jsonData = JSON.stringify(data)
+  let jsonData = JSON.stringify(data);
 
   console.log(firstName, lastName, email);
 
@@ -44,7 +44,7 @@ app.post("/", function (req, res) {
     body: jsonData
   };
 
-  request(options, function (error, response, body) {
+  request(options, (error, response, body) => {
     if (error) {
       console.log(error);
       res.sendFile(__dirname + "/failure.html");
@@ -58,10 +58,10 @@ app.post("/", function (req, res) {
   });
 });
 
-app.post("/failure.html", function (req, res) {
+app.post("/failure.html", (req, res) => {
   res.redirect("/");
 });
 
-app.listen(process.env.PORT || 3000, function () {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server is running on port 3000");
 });
