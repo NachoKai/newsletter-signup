@@ -1,12 +1,14 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const request = require('request');
+const express = require("express");
+const bodyParser = require("body-parser");
+const request = require("request");
 
 const app = express();
 
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
@@ -57,6 +59,9 @@ app.post("/", (req, res) => {
 });
 
 app.post("/failure.html", (req, res) => {
+  res.redirect("/");
+});
+app.post("/success.html", (req, res) => {
   res.redirect("/");
 });
 
