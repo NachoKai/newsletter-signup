@@ -37,7 +37,7 @@ app.post("/", (req, res) => {
     url: "https://us4.api.mailchimp.com/3.0/lists/512b28d287",
     method: "POST",
     headers: {
-      Authorization: "kaiafa 3d6a9f83b335d2802c26181c3ea0f71f-us4"
+      Authorization: "kaiafa aef0807ded827d854a141c3f3b4d58b6-us4"
     },
     body: jsonData
   };
