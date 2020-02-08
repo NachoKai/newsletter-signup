@@ -1,0 +1,129 @@
+* {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    outline: 0 !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #212529;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.top {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.middle {
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+
+.bottom {
+    margin-top: -2px;
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+h1 {
+    color: #f8f9fa;
+}
+
+button {
+    outline: 0 !important;
+    background-color: #1864ab !important;
+    color: #e9ecef !important;
+}
+
+
+#toggle {
+    z-index: 2;
+    background-color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 200px;
+    height: 100px;
+    border: 7px solid #000;
+    border-radius: 50px;
+    transition: all 0.25s ease-in-out;
+    transform: translate(-50%, -50%);
+}
+
+#toggle:hover {
+    cursor: pointer;
+}
+
+#toggle.light {
+    border: 7px solid #fff;
+    background-color: #000;
+}
+
+#toggle.dark {
+    background-color: #fff;
+}
+
+#sun-moon {
+    z-index: 1;
+    background-color: #ffda4b;
+    position: absolute;
+    top: 0;
+    left: 8px;
+    bottom: 0;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    transition: all 0.25s ease-in-out;
+}
+
+#sun-moon.moon {
+    left: 100%;
+    transform: translateX(-100%);
+    margin-left: -8px;
+    background-color: #000;
+    box-shadow: inset -25px 0 #fff;
+}
