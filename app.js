@@ -36,10 +36,10 @@ app.post("/", (req, res) => {
   console.log(firstName, lastName, email);
 
   let options = {
-    url: "https://<USX>.api.mailchimp.com/3.0/lists/<LIST-ID>",
+    url: "https://us4.api.mailchimp.com/3.0/lists/512b28d287",
     method: "POST",
     headers: {
-      Authorization: "<USER> <API-KEY>"
+      Authorization: "kaiafa 3d6a9f83b335d2802c26181c3ea0f71f-us4"
     },
     body: jsonData
   };
