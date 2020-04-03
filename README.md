@@ -1,5 +1,4 @@
 # Newsletter Signup
-### [Live Demo](https://newsletter-kai.herokuapp.com/)
 •NodeJs  
 •Express  
 •Mailchimp  
